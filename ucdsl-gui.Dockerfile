@@ -34,7 +34,7 @@ RUN opam pin -y why3 1.8.2
 # Setup the SMT solvers
 RUN opam pin -y alt-ergo 2.6.3
 USER root
-RUN cd /opt && wget https://github.com/Z3Prover/z3/releases/download/z3-4.15.3/z3-4.15.3-x64-glibc-2.39.zip && unzip z3-4.15.3-x64-glibc-2.39.zip && ln -s /opt/z3-4.15.3-x64-glibc-2.39/bin/z3 /usr/bin/z3 && cd /
+RUN cd /opt && wget https://github.com/Z3Prover/z3/releases/download/z3-4.16.0/z3-4.16.0-x64-glibc-2.39.zip && unzip z3-4.16.0-x64-glibc-2.39.zip && ln -s /opt/z3-4.16.0-x64-glibc-2.39/bin/z3 /usr/bin/z3 && cd /
 RUN cd /opt && wget https://github.com/cvc5/cvc5/releases/download/cvc5-1.3.4/cvc5-Linux-x86_64-libcxx-static.zip && unzip cvc5-Linux-x86_64-libcxx-static.zip && ln -s /opt/cvc5-Linux-x86_64-libcxx-static/bin/cvc5 /usr/bin/cvc5 && cd /
 
 # Modify the sudoers file for headless user

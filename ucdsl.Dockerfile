@@ -35,10 +35,10 @@ RUN opam pin -y why3 1.8.2
 RUN opam pin -y alt-ergo 2.6.3
 USER root
 RUN if [ "$TARGETARCH" = "arm64" ]; then \
-        cd /opt && wget https://github.com/Z3Prover/z3/releases/download/z3-4.15.3/z3-4.15.3-arm64-glibc-2.34.zip && unzip z3-4.15.3-arm64-glibc-2.34.zip && ln -s /opt/z3-4.15.3-arm64-glibc-2.34/bin/z3 /usr/bin/z3 && cd /; \
+        cd /opt && wget https://github.com/Z3Prover/z3/releases/download/z3-4.16.0/z3-4.16.0-arm64-glibc-2.38.zip && unzip z3-4.16.0-arm64-glibc-2.38.zip && ln -s /opt/z3-4.16.0-arm64-glibc-2.38/bin/z3 /usr/bin/z3 && cd /; \
         cd /opt && wget https://github.com/cvc5/cvc5/releases/download/cvc5-1.3.4/cvc5-Linux-arm64-static.zip && unzip cvc5-Linux-arm64-static.zip && ln -s /opt/cvc5-Linux-arm64-static/bin/cvc5 /usr/bin/cvc5 && cd /; \
     else \
-        cd /opt && wget https://github.com/Z3Prover/z3/releases/download/z3-4.15.3/z3-4.15.3-x64-glibc-2.39.zip && unzip z3-4.15.3-x64-glibc-2.39.zip && ln -s /opt/z3-4.15.3-x64-glibc-2.39/bin/z3 /usr/bin/z3 && cd /; \
+        cd /opt && wget https://github.com/Z3Prover/z3/releases/download/z3-4.16.0/z3-4.16.0-x64-glibc-2.39.zip && unzip z3-4.16.0-x64-glibc-2.39.zip && ln -s /opt/z3-4.16.0-x64-glibc-2.39/bin/z3 /usr/bin/z3 && cd /; \
         cd /opt && wget https://github.com/cvc5/cvc5/releases/download/cvc5-1.3.4/cvc5-Linux-x86_64-libcxx-static.zip && unzip cvc5-Linux-x86_64-libcxx-static.zip && ln -s /opt/cvc5-Linux-x86_64-libcxx-static/bin/cvc5 /usr/bin/cvc5 && cd /; \
     fi
 
